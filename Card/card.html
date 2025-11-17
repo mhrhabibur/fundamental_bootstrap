@@ -25,9 +25,6 @@
             align-items: center;
         }
 
-
-
-
         .card {
             max-width: 400px;
             width: 100%;
@@ -47,6 +44,11 @@
         .card-button:hover {
            color: aqua;
         }
+        .test:hover {
+            color: rgb(229, 12, 124); 
+            font-size: large;
+            background: red;
+        }
     </style>
 </head>
 
@@ -56,12 +58,15 @@
             <h2 class="card-title">Welcome to My Card</h2>
             <p class="card-subtitle">A centered card example</p>
         </div>
-        <div class="card-content p-3">
+
+        
+        <div class="card-body p-3">
             <p>This card is perfectly centered on the screen using CSS Flexbox. It features a clean design with subtle
                 shadows and hover effects.</p>
         </div>
-        <button class="card-button border-0 bg-success text-white rounded-pill">Learn More</button>
+        <button class="test card-button border-0 bg-success text-white rounded-pill">Learn More</button>
     </div>
+
 </body>
 
 </html>
