@@ -20,3 +20,7 @@
   text-justify: inter-word;
   line-height: 1.6;
 }
+
+.navbar img {
+    width: 130px;
+}
