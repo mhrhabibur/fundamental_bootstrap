@@ -301,58 +301,72 @@
 
     <div class="modal fade" id="employee_detail" data-bs-backdrop="static" tabindex="-1" aria-hidden="true"
         style="backdrop-filter: blur(5px);">
-        <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+
+                <!-- Header -->
                 <div class="modal-header text-white bg-dark">
                     <h5 class="modal-title">Employee Details</h5>
-                    <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal"
-                        aria-label="close"></button>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+
+                <!-- Body -->
+                <div class="modal-body p-0">
                     <table class="table table-bordered small mb-0">
-                        <tr>
-                            <th class="w-50">ID</th>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>Employee ID</th>
-                            <td>1</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th class="w-50">ID</th>
+                                <td>1</td>
+                            </tr>
 
+                            <tr>
+                                <th>Employee ID</th>
+                                <td>741</td>
+                            </tr>
 
-                        <tr>
-                            <th>First Name</th>
-                            <td>John</td>
-                        </tr>
+                            <tr>
+                                <th>First Name</th>
+                                <td>John</td>
+                            </tr>
 
-                        <tr>
-                            <th>Last Name</th>
-                            <td>Doe</td>
-                        </tr>
+                            <tr>
+                                <th>Last Name</th>
+                                <td>Doe</td>
+                            </tr>
 
-                        <tr>
-                            <th>Email ID</th>
-                            <td>john@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th>Phone</th>
-                            <td>123456</td>
-                        </tr>
-                        <tr>
-                            <th>Joining Date</th>
-                            <td>17/11/2025</td>
-                        </tr>
+                            <tr>
+                                <th>Email ID</th>
+                                <td>johndoe@gmail.com</td>
+                            </tr>
+
+                            <tr>
+                                <th>Phone</th>
+                                <td>741529632</td>
+                            </tr>
+
+                            <tr>
+                                <th>Joining Date</th>
+                                <td>25th July 2022</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
-                <div class="col-md-10 m-auto">
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-success btn-sm m-3" data-bs-target="#employee_edit"
-                            data-bs-toggle="modal">Edit</button>
-                    </div>
+
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <a class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#employee_edit">
+                        Edit Details
+                    </a>
+
+                    <button class="btn btn-sm btn-primary" data-bs-dismiss="modal">
+                        Close
+                    </button>
                 </div>
+
             </div>
         </div>
     </div>
+
 
     <div class="modal fade" id="employee_edit" data-bs-backdrop="static" tabindex="-1" aria-hidden="true"
         style="backdrop-filter: blur(5px);">
@@ -369,7 +383,7 @@
                             <div class="row gx-3">
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <input type="date" class="form-control form-control-sm" value="11/17/2025"
+                                        <input type="date" class="form-control form-control-sm" value="2022-07-25"
                                             required>
                                     </div>
                                 </div>
@@ -388,21 +402,21 @@
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <input type="email" class="form-control form-control-sm" value="john@gmail.com"
-                                            required placeholder="Email">
+                                        <input type="email" class="form-control form-control-sm"
+                                            value="johndoe@gmail.com" required placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <input type="tel" class="form-control form-control-sm" value="123456" required
-                                            placeholder="Phone">
+                                        <input type="tel" class="form-control form-control-sm" value="7418529632"
+                                            required placeholder="Phone">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <select class="form-select form-select-sm" aria-label="Job Assigned">
                                             <option>Select job for employee</option>
-                                            <option selected value="">Software Developer</option>
+                                            <option selected value=""> Graphic Designer</option>
                                             <option value="">Android Developer</option>
                                             <option value="">iOS Developer</option>
                                             <option value="">Back App Developer Developer</option>
@@ -413,7 +427,7 @@
 
                                 <div class="col-md-10">
                                     <div class="d-grid">
-                                        <button type="submit" class="btn btn-warning btn-sm mb-2">Update
+                                        <button type="submit" class="btn btn-success btn-sm">Update
                                             Employee</button>
                                     </div>
 
@@ -421,8 +435,8 @@
 
                                 <div class="col-md-2">
                                     <div class="d-grid">
-                                        <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal"
-                                            aria-label="close">Close</button>
+                                        <button type="button" class="btn btn-warning btn-sm" data-bs-dismiss="modal"
+                                            aria-label="close">Discard</button>
                                     </div>
 
                                 </div>
@@ -439,37 +453,35 @@
 
     <div class="modal fade" id="employee_delete" data-bs-backdrop="static" tabindex="-1" aria-hidden="true"
         style="backdrop-filter: blur(5px);">
-        <div class="modal-dialog modal-dialog-centered ">
+
+        <div class="modal-dialog modal-dialog-centered">
+            
             <div class="modal-content">
 
-                <div class="modal-body">
+                <div class="modal-body text-center d-flex justify-content-center align-items-center">
+                    <h4 class="fw-light m-0">
+                        Do you want delete <strong><q>John Doe</q></strong>?
+                    </h4>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-                    <div class="container">
-
-                        <div class="row gx-3">
-
-                            <h4 class="mb-5 text-center">Are you sure to delete the record?</h4>
-
-
-                            <div class="col-md-6">
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-danger btn-sm mb-2">Yes</button>
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="d-grid">
-                                    <button type="button" class="btn btn-success btn-sm " data-bs-dismiss="modal"
-                                        aria-label="close">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="modal-footer d-flex justify-content-end">
+                    <!-- <button type="submit" class="btn btn-sm btn-warning">
+                        Edit Details
+                    </button> -->
+                    <a class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#employee_edit" data-bs-dismiss="modal">
+                        Edit Details
+                    </a>
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal" aria-label="Close">
+                        Close
+                    </button>
                 </div>
             </div>
         </div>
+
     </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
